@@ -193,14 +193,48 @@ h2 {
 .about { max-width: 680px; color: var(--muted); font-size: 17px; }
 .about p { margin: 0 0 16px; }
 
+.focus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.focus li {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  background: var(--card);
+}
+.focus h3 { margin: 0 0 6px; font-size: 16px; font-weight: 600; }
+.focus p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.stack-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px 24px;
+  margin: 36px 0 0;
+}
+.stack-label {
+  margin: 0 0 10px;
+  font: 400 12px var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+}
+
 .stack {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 28px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
+
+.aside { margin: 32px 0 0; color: var(--muted); font-size: 15px; font-style: italic; }
 .stack li {
   padding: 6px 12px;
   border: 1px solid var(--line);
