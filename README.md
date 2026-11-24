@@ -32,11 +32,13 @@ Todo push na `main` publica em https://saulogatti.github.io em cerca de um minut
 
 ### Ligar o domínio saulogatti.com.br
 
-1. No DNS de `saulogatti.com.br` (onde o domínio estiver registrado):
+1. No DNS de `saulogatti.com.br` (hoje na Hostinger, *Domínios → DNS / Nameservers*):
+   - Apagar os `A`, `AAAA` e `ALIAS` de `@` e o `CNAME` de `www` que apontam para a
+     Hostinger. Manter o `TXT` `google-site-verification`.
    - `A` em `@` para `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `AAAA` em `@` para `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`,
+     `2606:50c0:8003::153`
    - `CNAME` em `www` para `saulogatti.github.io`
-   - Apagar os registros `A`/`CNAME` antigos de `@` e `www` que apontam para a Hostinger
-     (não mexa em `MX`/`TXT` de e-mail).
 2. Em *Settings → Pages → Custom domain*, informar `saulogatti.com.br` e salvar. O GitHub
    cria o arquivo `CNAME` na `main` (dê `git pull` depois).
 3. Quando o certificado sair, marcar *Enforce HTTPS* na mesma tela.
